@@ -125,7 +125,7 @@ RUBY
           before = project_folder + "/PROJECT_PatcherGenerator/" + file
           next unless File.exists? before
 
-          after = project_folder + "/PROJECT_PatcherGenerator/" + file.gsub("PROJECT_PatcherGenerator", @configurator.pod_name)
+          after = project_folder + "/PROJECT_PatcherGenerator/" + file.gsub("PROJECT", @configurator.pod_name)
           File.rename before, after
         end
       end
