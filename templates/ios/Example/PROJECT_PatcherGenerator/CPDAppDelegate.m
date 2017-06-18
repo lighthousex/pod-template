@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  CPDAppDelegate.m
 //  PROJECT_PatcherGenerator
 //
-//  Created by Zitao Xiong on 6/18/17.
+//  Created by PROJECT_OWNER on TODAYS_DATE.
 //  Copyright © 2017 PROJECT_OWNER. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CPDAppDelegate.h"
 
-@interface AppDelegate ()
+@interface CPDAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CPDAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

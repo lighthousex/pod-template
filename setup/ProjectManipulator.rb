@@ -106,6 +106,14 @@ RUBY
           File.rename before, after
         end
 
+        ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
+          before = project_folder + "/PROJECT_PatcherGenerator/" + file
+          next unless File.exists? before
+
+          after = project_folder + "/PROJECT_PatcherGenerator/" + file.gsub("CPD", prefix)
+          File.rename before, after
+        end
+
         # rename project related files
         ["PROJECT-Info.plist", "PROJECT-Prefix.pch"].each do |file|
           before = project_folder + "/PROJECT/" + file
