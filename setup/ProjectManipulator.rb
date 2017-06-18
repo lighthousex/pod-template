@@ -23,6 +23,7 @@ module Pod
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
+        "PROJECT_PatcherGenerator" => @configurator.pod_name + "patcher-generator",
         "CPD" => @prefix
       }
       replace_internal_project_settings
