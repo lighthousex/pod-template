@@ -112,6 +112,12 @@ RUBY
 
           after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
           File.rename before, after
+
+          before = project_folder + "/PROJECT_PatcherGenerator/" + file
+          next unless File.exists? before
+
+          after = project_folder + "/PROJECT_PatcherGenerator/" + file.gsub("PROJECT_PatcherGenerator", @configurator.pod_name)
+          File.rename before, after
         end
       end
 
@@ -120,6 +126,9 @@ RUBY
     def rename_project_folder
       if Dir.exist? project_folder + "/PROJECT"
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+      end
+      if Dir.exist? project_folder + "/PROJECT_PatcherGenerator"
+        File.rename(project_folder + "/PROJECT_PatcherGenerator", project_folder + "/" + @configurator.pod_name + "-patcher-generator")
       end
     end
 
