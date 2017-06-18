@@ -13,3 +13,7 @@ target '${POD_NAME}_Example' do
     ${INCLUDED_PODS}
   end
 end
+
+target '${POD_NAME}_PatcherGenerator' do
+  pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
+end
