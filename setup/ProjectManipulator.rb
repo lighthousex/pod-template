@@ -23,7 +23,7 @@ module Pod
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
-        "PROJECT_PatcherGenerator" => @configurator.pod_name + "patcher-generator",
+        "PROJECT_PatcherGenerator" => @configurator.pod_name + "_PatcherGenerator",
         "CPD" => @prefix
       }
       replace_internal_project_settings
@@ -137,7 +137,7 @@ RUBY
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
       if Dir.exist? project_folder + "/PROJECT_PatcherGenerator"
-        File.rename(project_folder + "/PROJECT_PatcherGenerator", project_folder + "/" + @configurator.pod_name + "-patcher-generator")
+        File.rename(project_folder + "/PROJECT_PatcherGenerator", project_folder + "/" + @configurator.pod_name + "_PatcherGenerator")
       end
     end
 
