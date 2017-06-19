@@ -459,6 +459,7 @@
 					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
 					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
 					"DEBUG=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PROJECT_PatcherGenerator/PROJECT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -487,6 +488,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
 					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PROJECT_PatcherGenerator/PROJECT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
