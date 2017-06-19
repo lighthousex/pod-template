@@ -456,7 +456,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
 					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
 					"DEBUG=1",
 					"$(inherited)",
@@ -486,7 +485,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
 					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
 					"$(inherited)",
 				);

@@ -17,3 +17,7 @@ end
 target '${POD_NAME}_PatcherGenerator' do
   pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
 end
+
+post_install do |installer|
+  `git clone https://github.com/caoer/AceFileGenerator-template ../AceFileGenerator-template`
+end

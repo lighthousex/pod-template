@@ -24,7 +24,9 @@
         config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/Javascript/Machine/"];
         config.objcUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/User/"];
         config.objcGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/Machine/"];
-        config.ignoredFilePath = [ACE_POD_ROOT stringByAppendingPathComponent:@"AceFileGenerator/Assets/template/ace-files-ignore"];
+        config.ignoredFilePath = [ACE_POD_ROOT stringByAppendingPathComponent:@"../AceFileGenerator-template/ace-files-ignore"];
+        config.templateDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../AceFileGenerator-template/"];
+        config.
     }];
     
     [self.fileGenerator generateFilesForClasses:@[@"UIView", @"UIViewController"]];
