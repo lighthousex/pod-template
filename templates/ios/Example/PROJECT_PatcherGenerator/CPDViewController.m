@@ -9,7 +9,7 @@
 #import "CPDViewController.h"
 @import AceFileGenerator;
 
-@interface CPDViewController ()
+@interface CPDViewController ()<LHXFileGeneratorDelegate>
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) LHXFileGenerator *fileGenerator;
@@ -20,14 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fileGenerator = [LHXFileGenerator generatorWithConfiguration:^(AceFileGeneratorConfiguration *config) {
-        config.javascriptUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/Javascript/User/"];
-        config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/Javascript/Machine/"];
-        config.objcUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/User/"];
-        config.objcGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/Machine/"];
+        config.javascriptUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/Javascript/User/"];
+        config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/Javascript/Machine/"];
+        config.objcUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/ObjectiveC/User/"];
+        config.objcGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/ObjectiveC/Machine/"];
+        
         config.ignoredFilePath = [ACE_POD_ROOT stringByAppendingPathComponent:@"../AceFileGenerator-template/ace-files-ignore"];
         config.templateDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../AceFileGenerator-template/"];
-        config.
     }];
+    
+    self.fileGenerator.delegate = self;
     
     [self.fileGenerator generateFilesForClasses:@[@"UIView", @"UIViewController"]];
 }
@@ -38,4 +40,13 @@
     return [NSBundle bundleWithPath:path];
 }
 
+- (void)fileGeneratorWillEnterGeneratingState:(LHXFileGenerator *)generator {
+    [self.activityIndicator startAnimating];
+    self.statusLabel.text = @"Generating...";
+}
+
+- (void)fileGeneratorWilLEnterIdleState:(LHXFileGenerator *)generator {
+    [self.activityIndicator stopAnimating];
+    self.statusLabel.text = @"Waiting for Change...";
+}
 @end
