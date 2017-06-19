@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) LHXFileGenerator *fileGenerator;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation CPDViewController
@@ -31,7 +32,18 @@
     
     self.fileGenerator.delegate = self;
     
-    [self.fileGenerator generateFilesForClasses:@[@"UIView", @"UIViewController"]];
+    NSString *classesPath = [[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:classesPath]) {
+        NSDictionary *classesDict = [[NSDictionary alloc] initWithContentsOfFile:classesPath];
+        NSArray *classes = classesDict[@"classes"];
+        if ([classes isKindOfClass:[NSArray class]]) {
+            [self.fileGenerator generateFilesForClasses:classes];
+            self.textView = [classes componentsJoinedByString:@", "];
+            return;
+        }
+    }
+    
+    self.statusLabel.text = @"Can't find classes to run, check documentation.";
 }
 
 + (NSBundle *)resourcesBundle {

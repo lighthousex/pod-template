@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092E21331EF7DFAB0084CC7E /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 092E21321EF7DFAB0084CC7E /* Classes.plist */; };
 		09BB6A631EF717C90067376A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BB6A621EF717C90067376A /* main.m */; };
 		09BB6A661EF717C90067376A /* CPDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BB6A651EF717C90067376A /* CPDAppDelegate.m */; };
 		09BB6A691EF717C90067376A /* CPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BB6A681EF717C90067376A /* CPDViewController.m */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092E21321EF7DFAB0084CC7E /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
 		09BB6A5F1EF717C90067376A /* PROJECT_PatcherGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT_PatcherGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BB6A621EF717C90067376A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09BB6A641EF717C90067376A /* CPDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDAppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				09BB6A651EF717C90067376A /* CPDAppDelegate.m */,
 				09BB6A671EF717C90067376A /* CPDViewController.h */,
 				09BB6A681EF717C90067376A /* CPDViewController.m */,
+				092E21321EF7DFAB0084CC7E /* Classes.plist */,
 				09BB6A6A1EF717C90067376A /* Main.storyboard */,
 				09BB6A6F1EF717C90067376A /* LaunchScreen.storyboard */,
 				09BB6A791EF720550067376A /* Images.xcassets */,
@@ -325,6 +328,7 @@
 				09BB6A7D1EF720550067376A /* Images.xcassets in Resources */,
 				09BB6A7C1EF720550067376A /* InfoPlist.strings in Resources */,
 				09BB6A6C1EF717C90067376A /* Main.storyboard in Resources */,
+				092E21331EF7DFAB0084CC7E /* Classes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
