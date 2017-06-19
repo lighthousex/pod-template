@@ -20,11 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fileGenerator = [LHXFileGenerator generatorWithConfiguration:^(AceFileGeneratorConfiguration *config) {
-        config.javascriptUserFilesDirectory = [PROJECT_DIR stringByAppendingString:@"../Ace/Javascript/User/"];
-        config.javascriptGenerateFilesDirectory = [PROJECT_DIR stringByAppendingString:@"../Ace/Javascript/Machine/"];
-        config.objcUserFilesDirectory = [PROJECT_DIR stringByAppendingString:@"../Ace/ObjectiveC/User/"];
-        config.objcGenerateFilesDirectory = [PROJECT_DIR stringByAppendingString:@"../Ace/ObjectiveC/Machine/"];
-        config.ignoredFilePath = [PROJECT_DIR stringByAppendingString:@"../AceFileGenerator/Assets/template/ace-files-ignore"];
+        config.javascriptUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/Javascript/User/"];
+        config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/Javascript/Machine/"];
+        config.objcUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/User/"];
+        config.objcGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"Ace/ObjectiveC/Machine/"];
+        config.ignoredFilePath = [ACE_POD_ROOT stringByAppendingPathComponent:@"AceFileGenerator/Assets/template/ace-files-ignore"];
     }];
     
     [self.fileGenerator generateFilesForClasses:@[@"UIView", @"UIViewController"]];

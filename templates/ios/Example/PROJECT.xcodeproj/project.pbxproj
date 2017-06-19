@@ -455,6 +455,11 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
+					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
+					"DEBUG=1",
+				);
 				INFOPLIST_FILE = "PROJECT_PatcherGenerator/PROJECT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -479,6 +484,10 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"ACE_POD_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
+					"ACE_POD_ROOT=@\\\"\"$SRCROOT\"\\\"",
+				);
 				INFOPLIST_FILE = "PROJECT_PatcherGenerator/PROJECT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
