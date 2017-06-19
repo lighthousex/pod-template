@@ -56,6 +56,9 @@ module Pod
 
       loop do
         prefix = configurator.ask_with_answers("What is your class prefix", ["LHX"])
+        if prefix == 'lhx'
+          prefix = 'LHX'
+        end
 
         if prefix.include?(' ')
           puts 'Your class prefix cannot contain spaces.'.red
