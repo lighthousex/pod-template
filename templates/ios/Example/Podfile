@@ -1,11 +1,13 @@
+source 'https://github.com/caoer/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 platform :ios, '10.1'
 
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
 
-#  pod 'LHXKit/AppBuilder', git: 'https://github.com/caoer/LHXKit'
-#  pod 'LHXKit/Network', git: 'https://github.com/caoer/LHXKit'
+  pod 'LHXCore', git: 'https://github.com/caoer/LHXCore'
 
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
