@@ -38,7 +38,7 @@
         NSArray *classes = classesDict[@"classes"];
         if ([classes isKindOfClass:[NSArray class]]) {
             [self.fileGenerator generateFilesForClasses:classes];
-            self.textView = [classes componentsJoinedByString:@", "];
+            self.textView.text = [classes componentsJoinedByString:@", "];
             return;
         }
     }
@@ -61,6 +61,6 @@
 - (void)fileGeneratorWilLEnterIdleState:(LHXFileGenerator *)generator {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.hidden = YES;
-    self.statusLabel.text = @"Waiting for Change...";
+    self.statusLabel.text = @"Finished. Waiting for Change...";
 }
 @end
