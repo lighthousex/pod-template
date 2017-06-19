@@ -30,8 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = '${POD_NAME}/Classes/**/*'
+  s.source_files = ['${POD_NAME}/Classes/**/*', '${POD_NAME}/Ace/ObjectiveC/**/*']
   
+  s.dependency 'LHXKit'
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
   # }

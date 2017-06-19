@@ -42,11 +42,13 @@
 
 - (void)fileGeneratorWillEnterGeneratingState:(LHXFileGenerator *)generator {
     [self.activityIndicator startAnimating];
+    self.activityIndicator.hidden = NO;
     self.statusLabel.text = @"Generating...";
 }
 
 - (void)fileGeneratorWilLEnterIdleState:(LHXFileGenerator *)generator {
     [self.activityIndicator stopAnimating];
+    self.activityIndicator.hidden = YES;
     self.statusLabel.text = @"Waiting for Change...";
 }
 @end
