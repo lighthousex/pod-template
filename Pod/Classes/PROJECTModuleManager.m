@@ -1,14 +1,14 @@
 //
-//  PROJECTModuleManager.m
+//  ${POD_NAME}ModuleManager.m
 //  Pods
 //
 //  Created by Zitao Xiong on 6/20/17.
 //
 //
 
-#import "PROJECTModuleManager.h"
+#import "${POD_NAME}ModuleManager.h"
 
-@implementation PROJECTModuleManager
+@implementation ${POD_NAME}ModuleManager
 + (NSUInteger)applicationModuleLoadPriority; {
     return 1000;
 }
@@ -26,7 +26,7 @@
 
 + (NSBundle *)moduleBundle {
     NSBundle *appBuilderBundle = [NSBundle bundleForClass:self];
-    NSString *path  = [appBuilderBundle pathForResource:@"PROJECT" ofType:@"bundle"];
+    NSString *path  = [appBuilderBundle pathForResource:@"${POD_NAME}" ofType:@"bundle"];
     return [NSBundle bundleWithPath:path];
 }
 @end
