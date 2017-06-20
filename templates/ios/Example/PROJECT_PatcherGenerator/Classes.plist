@@ -3,10 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>classes</key>
-	<array>
-		<string>CALayer</string>
-		<string>UIView</string>
-		<string>UIViewController</string>
-	</array>
+	<array/>
 </dict>
 </plist>

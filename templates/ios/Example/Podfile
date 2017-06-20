@@ -17,6 +17,8 @@ target '${POD_NAME}_Example' do
 end
 
 target '${POD_NAME}_PatcherGenerator' do
+  pod '${POD_NAME}', :path => '../'
+  pod 'LHXCore', git: 'https://github.com/caoer/LHXCore'
   pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
 end
 
@@ -31,5 +33,11 @@ post_install do |installer|
     `cd ../AceFileAutoFix`
   else
     `git clone https://github.com/caoer/AceFileAutoFix ../AceFileAutoFix`
+  end
+
+  if File.exist?('../ace-apps')
+  else
+    `git clone https://github.com/caoer/ace-apps-template ../ace-apps`
+    `cd ../ace-apps; npm install;`
   end
 end
