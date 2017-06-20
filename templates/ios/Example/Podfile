@@ -21,5 +21,15 @@ target '${POD_NAME}_PatcherGenerator' do
 end
 
 post_install do |installer|
-  `git clone https://github.com/caoer/AceFileGenerator-template ../AceFileGenerator-template`
+  if File.exist?('../AceFileGenerator-template')
+    `cd ../AceFileGenerator-template; git pull;`
+  else 
+    `git clone https://github.com/caoer/AceFileGenerator-template ../AceFileGenerator-template`
+  end
+
+  if File.exist?('../AceFileAutoFix')
+    `cd ../AceFileAutoFix`
+  else
+    `git clone https://github.com/caoer/AceFileAutoFix ../AceFileAutoFix`
+  end
 end

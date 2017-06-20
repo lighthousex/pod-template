@@ -21,8 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fileGenerator = [LHXFileGenerator generatorWithConfiguration:^(AceFileGeneratorConfiguration *config) {
-        config.javascriptUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/Javascript/User/"];
-        config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/Javascript/Machine/"];
+        config.javascriptUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../ace-libs/lib/user"];
+        config.javascriptGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../ace-libs/lib/machine"];
         config.objcUserFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/ObjectiveC/User/"];
         config.objcGenerateFilesDirectory = [ACE_POD_ROOT stringByAppendingPathComponent:@"../PROJECT/Ace/ObjectiveC/Machine/"];
         

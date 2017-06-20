@@ -7,12 +7,26 @@
 //
 
 #import "CPDAppDelegate.h"
+@import LHXKit;
 
 @implementation CPDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
+    
+    LHXAppConfiguration *configuration = [[LHXAppConfiguration alloc] init];
+    configuration.host = @"0.0.0.0";
+    configuration.appDomain = @"com.lighthousex.test";
+#ifdef DEBUG
+    configuration.developmentMode = YES;
+#else
+    configuration.developmentMode = NO;
+#endif
+    
+    LHXApp *app = [LHXApp appWithConfiguration:configuration];
+    
+    [app start];
     return YES;
 }
 
