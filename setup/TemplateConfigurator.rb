@@ -117,7 +117,7 @@ module Pod
     end
 
     def replace_variables_in_files
-      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path, 'Pod/Classes/PROJECTModuleManager.h', 'Pod/Classes/PROJECTModuleManager.m', 'templates/lib/package.json']
+      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path, 'Pod/Classes/PROJECTModuleManager.h', 'Pod/Classes/PROJECTModuleManager.m', 'ace-apps/lib/package.json']
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
@@ -182,7 +182,6 @@ module Pod
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.h", "Pod/Classes/#{pod_name}ModuleManager.h"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.m", "Pod/Classes/#{pod_name}ModuleManager.m"
-      FileUtils.mv "templates/lib", "ace-apps/lib"
     end
 
     def rename_classes_folder
