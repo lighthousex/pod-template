@@ -35,9 +35,9 @@ module Pod
       print_info = Proc.new {
 
         possible_answers_string = possible_answers.each_with_index do |answer, i|
-           _answer = (i == 0) ? answer.underlined : answer
-           print " " + _answer
-           print(" /") if i != possible_answers.length-1
+          _answer = (i == 0) ? answer.underlined : answer
+          print " " + _answer
+          print(" /") if i != possible_answers.length-1
         end
         print " ]\n"
       }
@@ -72,11 +72,11 @@ module Pod
 
       framework = self.ask_with_answers("What language do you want to use?", ["ObjC", "Swift"]).to_sym
       case framework
-        when :swift
-          ConfigureSwift.perform(configurator: self)
+      when :swift
+        ConfigureSwift.perform(configurator: self)
 
-        when :objc
-          ConfigureIOS.perform(configurator: self)
+      when :objc
+        ConfigureIOS.perform(configurator: self)
       end
 
       replace_variables_in_files
@@ -117,10 +117,11 @@ module Pod
     end
 
     def replace_variables_in_files
-      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path, 'Pod/Classes/PROJECTModuleManager.h', 'Pod/Classes/PROJECTModuleManager.m']
+      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path, 'Pod/Classes/PROJECTModuleManager.h', 'Pod/Classes/PROJECTModuleManager.m', 'templates/lib/package.json']
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
+        text.gsub!("${NPM_NAME}", kebabcase(@pod_name))
         text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
         text.gsub!("${USER_NAME}", user_name)
         text.gsub!("${USER_EMAIL}", user_email)
@@ -128,6 +129,16 @@ module Pod
         text.gsub!("${DATE}", date)
         File.open(file_name, "w") { |file| file.puts text }
       end
+    end
+
+    def kebabcase
+      #gsub(/::/, '/').
+      gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+        gsub(/([a-z\d])([A-Z])/,'\1_\2').
+        tr('-', '-').
+        gsub(/\s/, '-').
+        gsub(/__+/, '-').
+        downcase
     end
 
     def add_pod_to_podfile podname
@@ -171,6 +182,7 @@ module Pod
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.h", "Pod/Classes/#{pod_name}ModuleManager.h"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.m", "Pod/Classes/#{pod_name}ModuleManager.m"
+      FileUtils.mv "templates/lib", "ace-apps/lib"
     end
 
     def rename_classes_folder
@@ -184,7 +196,7 @@ module Pod
     end
 
     def validate_user_details
-        return (user_email.length > 0) && (user_name.length > 0)
+      return (user_email.length > 0) && (user_name.length > 0)
     end
 
     #----------------------------------------#

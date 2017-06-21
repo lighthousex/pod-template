@@ -1,0 +1,46 @@
+{
+  "name": "@zitao/${NPM_NAME}",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "version": "npm run build && git add -A build",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "author": "Zitao Xiong",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "7.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-plugin-syntax-trailing-function-commas": "^6.20.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "lodash": "^4.17.4",
+    "ramda": "^0.24.1",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "@zitao/lighthousex-ios": "^1.0.7",
+    "@zitao/lighthousex-ios-core": "^1.0.3",
+    "bluebird": "^3.4.7",
+    "global": "^4.3.2",
+    "invariant": "^2.2.2",
+    "prettier-standard": "^5.0.0",
+    "warning": "^3.0.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./tests/jest-setup.js"
+    ]
+  }
+}
