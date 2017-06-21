@@ -131,9 +131,9 @@ module Pod
       end
     end
 
-    def kebabcase
+    def kebabcase name
       #gsub(/::/, '/').
-      gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+      name.gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
         gsub(/([a-z\d])([A-Z])/,'\1_\2').
         tr('-', '-').
         gsub(/\s/, '-').
