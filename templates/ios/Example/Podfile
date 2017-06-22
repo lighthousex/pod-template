@@ -17,7 +17,7 @@ target '${POD_NAME}_Example' do
 end
 
 target '${POD_NAME}_PatcherGenerator' do
-  pod '${POD_NAME}', :path => '../'
+  # pod '${POD_NAME}', :path => '../'
   pod 'LHXCore', git: 'https://github.com/caoer/LHXCore'
   pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
 end
