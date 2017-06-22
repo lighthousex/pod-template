@@ -1,0 +1,15 @@
+{
+  "name": "@zitao/${NPM_NAME}-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zitao/ace-dev-server": "^1.0.12",
+    "egg": "^1.5.0"
+  }
+}
