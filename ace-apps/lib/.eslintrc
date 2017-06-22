@@ -1,0 +1,27 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    "strict": 0,
+    "semi": "off",
+    "no-console": 0,
+    "generator-star-spacing": 0,
+    "array-bracket-spacing": 0,
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "generator-star-spacing": ["error", {"before": true, "after": false}],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "quotes": [
+      "error",
+      "single"
+    ]
+  },
+  "globals": {
+    "app": true,
+    "request": true,
+    "mm": true,
+    "mock": true,
+    "assert": true,
+  }
+}

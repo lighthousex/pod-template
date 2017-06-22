@@ -1,0 +1,71 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        "es2015",
+        "stage-0"
+      ],
+      "plugins": [
+        "syntax-trailing-function-commas",
+      "transform-flow-strip-types"
+      ]
+    },
+      "production": {
+        "presets": [
+          [
+            "env",
+          {
+            "targets": {
+              "ios": 10
+            },
+            "modules": true,
+            "debug": false,
+            "loose": true
+          }
+          ],
+          "stage-0"
+        ],
+        "plugins": [
+          "external-helpers",
+        [
+          "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+        ],
+        "syntax-trailing-function-commas",
+        "transform-flow-strip-types"
+        ]
+
+      },
+      "development": {
+        "presets": [
+          [
+            "env",
+          {
+            "targets": {
+              "ios": 10
+            },
+            "modules": false,
+            "debug": false,
+            "loose": true
+          }
+          ],
+          "stage-0"
+        ],
+        "plugins": [
+          "external-helpers",
+        [
+          "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+        ],
+        "syntax-trailing-function-commas",
+        "transform-flow-strip-types"
+        ]
+      }
+  }
+}
