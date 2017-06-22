@@ -26,18 +26,18 @@ post_install do |installer|
   if File.exist?('../AceFileGenerator-template')
     `cd ../AceFileGenerator-template; git pull;`
   else 
-    `git clone https://github.com/caoer/AceFileGenerator-template ../AceFileGenerator-template`
+    `git add submodule https://github.com/caoer/AceFileGenerator-template ../AceFileGenerator-template`
   end
 
   if File.exist?('../AceFileAutoFix')
     `cd ../AceFileAutoFix`
   else
-    `git clone https://github.com/caoer/AceFileAutoFix ../AceFileAutoFix`
+    `git add submodule https://github.com/caoer/AceFileAutoFix ../AceFileAutoFix`
   end
 
   if File.exist?('../ace-apps')
   else
     `git clone https://github.com/caoer/ace-apps-template ../ace-apps`
-    `cd ../ace-apps; npm install;`
+    `cd ../ace-apps; npm install; rm -rf .git`
   end
 end
