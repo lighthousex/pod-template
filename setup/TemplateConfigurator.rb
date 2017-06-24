@@ -182,6 +182,7 @@ module Pod
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.h", "Pod/Classes/#{pod_name}ModuleManager.h"
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.m", "Pod/Classes/#{pod_name}ModuleManager.m"
+      FileUtils.mv "Pod/Classes/PROJECTFrameworkImport.h", "Pod/Classes/#{pod_name}FrameworkImport.h"
     end
 
     def rename_classes_folder
