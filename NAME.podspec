@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
   
   s.dependency 'LHXKit'
   s.resource_bundles = {
-    '${POD_NAME}' => ['${POD_NAME}/Assets/Classes.plist', '${POD_NAME}/Assets/index.min.js']
+    '${POD_NAME}' => ['${POD_NAME}/Assets/Classes.plist', '${POD_NAME}/Assets/index.min.js',  '${POD_NAME}/Assets/Assets.xcassets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
