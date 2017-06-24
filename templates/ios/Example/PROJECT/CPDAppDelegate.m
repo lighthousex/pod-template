@@ -7,7 +7,7 @@
 //
 
 #import "CPDAppDelegate.h"
-@import LHXKit;
+@import LHXHowl;
 
 @implementation CPDAppDelegate
 
