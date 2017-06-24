@@ -32,6 +32,8 @@
     
     self.fileGenerator.delegate = self;
     
+    self.fileGenerator.projectName = @"PROJECT";
+    
     NSString *classesPath = [[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:classesPath]) {
         NSDictionary *classesDict = [[NSDictionary alloc] initWithContentsOfFile:classesPath];
