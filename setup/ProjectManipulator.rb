@@ -128,6 +128,8 @@ RUBY
           after = project_folder + "/PROJECT_PatcherGenerator/" + file.gsub("PROJECT", @configurator.pod_name)
           File.rename before, after
         end
+
+        File.rename "PROJECT.xcodeproj", @configurator.pod_name + ".xcodeproj"
       end
 
     end
@@ -143,6 +145,17 @@ RUBY
 
     def replace_internal_project_settings
       Dir.glob(project_folder + "/**/**/**/**").each do |name|
+        next if Dir.exists? name
+        text = File.read(name)
+
+        for find, replace in @string_replacements
+            text = text.gsub(find, replace)
+        end
+
+        File.open(name, "w") { |file| file.puts text }
+      end
+
+      Dir.glob("PROJECT.xcodeproj").each do |name|
         next if Dir.exists? name
         text = File.read(name)
 
