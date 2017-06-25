@@ -77,10 +77,10 @@ module Pod
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
+
   ${INCLUDED_PODS}
 end
-RUBY
+      RUBY
       File.open(podfile_path, "w") { |file| file.puts podfile_text }
     end
 
@@ -149,7 +149,7 @@ RUBY
         text = File.read(name)
 
         for find, replace in @string_replacements
-            text = text.gsub(find, replace)
+          text = text.gsub(find, replace)
         end
 
         File.open(name, "w") { |file| file.puts text }
@@ -160,19 +160,20 @@ RUBY
         text = File.read(name)
 
         for find, replace in @string_replacements
-            text = text.gsub(find, replace)
+          text = text.gsub(find, replace)
         end
 
         File.open(name, "w") { |file| file.puts text }
       end
 
-        text = File.read("Pod/PROJECT.h")
+      name = "Pod/PROJECT.h"
+      text = File.read(name)
 
-        for find, replace in @string_replacements
-            text = text.gsub(find, replace)
-        end
+      for find, replace in @string_replacements
+        text = text.gsub(find, replace)
+      end
 
-        File.open(name, "w") { |file| file.puts text }
+      File.open(name, "w") { |file| file.puts text }
     end
 
   end
