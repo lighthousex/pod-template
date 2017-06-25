@@ -165,6 +165,14 @@ RUBY
 
         File.open(name, "w") { |file| file.puts text }
       end
+
+        text = File.read("Pod/PROJECT.h")
+
+        for find, replace in @string_replacements
+            text = text.gsub(find, replace)
+        end
+
+        File.open(name, "w") { |file| file.puts text }
     end
 
   end
