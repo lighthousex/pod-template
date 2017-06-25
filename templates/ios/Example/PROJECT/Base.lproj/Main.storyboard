@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,22 +23,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M96-mY-aEH">
-                                <rect key="frame" x="126.5" y="74" width="124" height="32.5"/>
+                                <rect key="frame" x="125.5" y="74" width="124" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.44509595629999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwA-Qv-0JA">
+                                <rect key="frame" x="10" y="160" width="355" height="499"/>
+                                <color key="backgroundColor" red="0.96835190059999998" green="0.96849077939999995" blue="0.9683216214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.2224687934" green="0.15801915529999999" blue="0.2014064193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnv-7Y-YnC">
+                                <rect key="frame" x="170" y="122" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="LwA-Qv-0JA" secondAttribute="bottom" constant="8" id="Svo-vi-qmE"/>
                             <constraint firstItem="M96-mY-aEH" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="XMK-p7-grg"/>
+                            <constraint firstItem="Lnv-7Y-YnC" firstAttribute="top" secondItem="M96-mY-aEH" secondAttribute="bottom" constant="15.5" id="Yge-fs-ZJr"/>
+                            <constraint firstItem="LwA-Qv-0JA" firstAttribute="top" secondItem="Lnv-7Y-YnC" secondAttribute="bottom" constant="8" id="dol-1t-bMJ"/>
+                            <constraint firstItem="LwA-Qv-0JA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="-6" id="fRz-Rg-rLe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LwA-Qv-0JA" secondAttribute="trailing" constant="-6" id="vPx-N6-Ei4"/>
+                            <constraint firstItem="Lnv-7Y-YnC" firstAttribute="centerX" secondItem="M96-mY-aEH" secondAttribute="centerX" id="y1T-aF-3MR"/>
                             <constraint firstItem="M96-mY-aEH" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="54" id="zPz-nI-9PG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadButton" destination="Lnv-7Y-YnC" id="XES-UH-pzE"/>
+                        <outlet property="textView" destination="LwA-Qv-0JA" id="Vkx-pc-XF4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

@@ -15,18 +15,7 @@
 {
     [self.window makeKeyAndVisible];
     
-    LHXAppConfiguration *configuration = [[LHXAppConfiguration alloc] init];
-    configuration.host = @"0.0.0.0";
-    configuration.appDomain = @"com.lighthousex.test";
-#ifdef DEBUG
-    configuration.developmentMode = YES;
-#else
-    configuration.developmentMode = NO;
-#endif
-    
-    LHXApp *app = [LHXApp appWithConfiguration:configuration];
-    
-    [app start];
+
     return YES;
 }
 
