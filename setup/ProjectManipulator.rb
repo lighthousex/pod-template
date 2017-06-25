@@ -155,7 +155,7 @@ RUBY
         File.open(name, "w") { |file| file.puts text }
       end
 
-      Dir.glob("PROJECT.xcodeproj").each do |name|
+      Dir.glob("PROJECT.xcodeproj/**/**").each do |name|
         next if Dir.exists? name
         text = File.read(name)
 
