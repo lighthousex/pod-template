@@ -5,7 +5,7 @@
 //
 
 @import Foundation;
-@import LHXHowl;
+@import LHXHowlCore;
 
 @interface ${POD_NAME}ModuleManager : NSObject<LHXAppModuleRegistrable>
 
