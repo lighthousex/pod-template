@@ -7,8 +7,7 @@
 //
 
 #import "CPDViewController.h"
-@import LHXHowl;
-@import LHXCore;
+@import LHXHowlCore;
 
 @interface CPDViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loadButton;
