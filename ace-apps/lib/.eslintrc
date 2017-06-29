@@ -1,27 +1,43 @@
 {
-  "extends": "eslint-config-egg",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "ENV": true,
+    "callJS": true,
+    "global": true,
+    "require": true,
+    "registerModules": true,
+    "testCallNative": true,
+    "removeCallback": true,
+    "test": true,
+    "describe": true,
+    "expect": true,
+    "handleCallback": true,
+    "callNativeClass": true,
+    "callNativeInstance": true,
+    "destroyInstance": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
     "strict": 0,
     "semi": "off",
     "no-console": 0,
-    "generator-star-spacing": 0,
-    "array-bracket-spacing": 0,
+    "generator-star-spacing": ["error", {"before": true, "after": false}],
     "linebreak-style": [
       "error",
       "unix"
     ],
-    "generator-star-spacing": ["error", {"before": true, "after": false}],
     "indent": [2, 2, {"SwitchCase": 1}],
     "quotes": [
       "error",
       "single"
     ]
-  },
-  "globals": {
-    "app": true,
-    "request": true,
-    "mm": true,
-    "mock": true,
-    "assert": true,
   }
 }
+

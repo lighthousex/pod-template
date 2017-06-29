@@ -27,7 +27,6 @@
   "rules": {
     "strict": 0,
     "semi": "off",
-    "generator-star-spacing": 0,
     "no-console": 0,
     "generator-star-spacing": ["error", {"before": true, "after": false}],
     "linebreak-style": [

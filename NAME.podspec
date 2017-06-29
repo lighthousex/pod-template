@@ -32,8 +32,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = ['${POD_NAME}/Classes/**/*', '${POD_NAME}/Ace/ObjectiveC/**/*']
   
-  s.dependency 'LHXHowl'
-  s.dependency 'UIKitACE'
+  s.dependency 'LHXHowlCore'
+
   s.resource_bundles = {
     '${POD_NAME}' => ['${POD_NAME}/Assets/Classes.plist', '${POD_NAME}/Assets/index.min.js',  '${POD_NAME}/Assets/Assets.xcassets']
   }

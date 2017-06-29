@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: `${path.resolve(__dirname)}/index.js`,
   output: {
-    path: `${path.resolve(__dirname)}/../../${POD_NAME}/Assets/`,
+    path: `${path.resolve(__dirname)}/../../${POD_NAME}/${POD_NAME}.bundle/`,
     library: '${POD_NAME}',
     libraryTarget: 'umd',
     filename: 'index.min.js',
