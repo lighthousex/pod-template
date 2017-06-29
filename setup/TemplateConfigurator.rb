@@ -184,6 +184,8 @@ module Pod
       FileUtils.mv "Pod/Classes/PROJECTModuleManager.m", "Pod/Classes/#{pod_name}ModuleManager.m"
       FileUtils.mv "Pod/Classes/PROJECTFrameworkImport.h", "Pod/Classes/#{pod_name}FrameworkImport.h"
       FileUtils.mv "Pod/PROJECT.h", "Pod/#{pod_name}.h"
+      FileUtils.mv "Pod/PROJECT.bundle/PROJECT.plist", "Pod/#{pod_name}.bundle/#{pod_name}.plist"
+      FileUtils.mv "Pod/PROJECT.bundle", "Pod/#{pod_name}.bundle"
     end
 
     def rename_classes_folder
