@@ -7,7 +7,7 @@ platform :ios, '10.1'
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
 
-  pod 'LHXCore', git: 'https://github.com/caoer/LHXCore'
+  pod 'LHXHowlCore'
 
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
@@ -17,8 +17,7 @@ target '${POD_NAME}_Example' do
 end
 
 target '${POD_NAME}_PatcherGenerator' do
-  # pod '${POD_NAME}', :path => '../'
-  pod 'LHXCore', git: 'https://github.com/caoer/LHXCore'
+  //TODO: add necesary dependency here
   pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
 end
 
