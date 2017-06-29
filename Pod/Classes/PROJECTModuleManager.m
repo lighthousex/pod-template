@@ -14,7 +14,7 @@
 }
 
 + (NSArray<NSString *> *)applicationModuleClasses {
-    NSString *classesPath = [[self applicationAssetsBundle] pathForResource:@"Classes" ofType:@"plist"];
+    NSString *classesPath = [[self applicationAssetsBundle] pathForResource:@"${POD_NAME}" ofType:@"plist"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:classesPath]) {
         NSDictionary *classesDict = [[NSDictionary alloc] initWithContentsOfFile:classesPath];
         NSArray *classes = classesDict[@"classes"];
