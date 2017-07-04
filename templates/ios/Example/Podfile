@@ -17,7 +17,7 @@ target '${POD_NAME}_Example' do
 end
 
 target '${POD_NAME}_PatcherGenerator' do
-  //TODO: add necesary dependency here
+  #TODO: add necesary dependency here
   pod 'AceFileGenerator', git: 'https://github.com/caoer/AceFileGenerator'
 end
 
