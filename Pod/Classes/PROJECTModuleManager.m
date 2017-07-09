@@ -46,8 +46,6 @@
 }
 
 + (NSBundle * _Nullable)applicationAssetsBundle {
-    NSBundle *appBuilderBundle = [NSBundle bundleForClass:self];
-    NSString *path  = [appBuilderBundle pathForResource:@"${POD_NAME}" ofType:@"bundle"];
-    return [NSBundle bundleWithPath:path];
+    return [NSBundle bundleForClass:self];
 }
 @end
