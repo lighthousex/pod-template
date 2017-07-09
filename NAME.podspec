@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   s.dependency 'LHXHowlCore'
 
   s.resource_bundles = {
-    '${POD_NAME}' => ['${POD_NAME}/${POD_NAME}.bundle/${POD_NAME}.plist', '${POD_NAME}/${POD_NAME}.bundle/index.min.js']
+    '${POD_NAME}' => ['${POD_NAME}/Assets/${POD_NAME}.plist', '${POD_NAME}/Assets/index.min.js']
   }
 
   # add assets if necessary '${POD_NAME}/Assets/Assets.xcassets'
