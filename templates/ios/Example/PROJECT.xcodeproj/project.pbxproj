@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		093AA6F91EF91EE6007DF354 /* PROJECT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PROJECT.plist; path = ../../PROJECT/PROJECT.bundle/PROJECT.plist; sourceTree = "<group>"; };
+		093AA6F91EF91EE6007DF354 /* PROJECT.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PROJECT.plist; path = ../../PROJECT/Assets/PROJECT.plist; sourceTree = "<group>"; };
 		09921F191EFFB3C400D6CB04 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../ace-apps/apps/com.lighthousex.test/app/storyboards/Main.storyboard"; sourceTree = "<group>"; };
 		09BB6A5F1EF717C90067376A /* PROJECT_PatcherGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT_PatcherGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BB6A621EF717C90067376A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
