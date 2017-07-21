@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@zitao/ace-dev-server": "^1.0.12",
+    "@zitao/dragon-menu": "^1.0.6",
+    "@zitao/to-crop-view-controller-ace": "^0.0.5",
     "egg": "^1.5.0"
   }
 }

@@ -1,6 +1,6 @@
 import { default as Wat, setNativeLogLevel } from '@zitao/lighthousex-ios-core';
-import { UIWindow } from '@zitao/lighthousex-ios';
 
+const UIWindow = Wat.getNativeClass('UIWindow');
 import { Demo } from './demo';
 
 async function AppAsyncInit() {

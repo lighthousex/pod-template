@@ -1,9 +1,8 @@
-import { UIViewController } from '@zitao/lighthousex-ios';
+import Wat from '@zitao/lighthousex-ios-core';
 
+const UIViewController = Wat.getNativeClass('UIViewController');
 export class Demo extends UIViewController {
-  viewDidLoad() {
-
-  }
+  viewDidLoad() {}
 
   static get creationOptions() {
     return {

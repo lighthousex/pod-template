@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,11 +27,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Playwith it on Storyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsS-jZ-0RN">
+                                <rect key="frame" x="77" y="154" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WsS-jZ-0RN" firstAttribute="centerX" secondItem="9G3-oc-1XC" secondAttribute="centerX" id="AfW-UU-ydB"/>
                             <constraint firstItem="9G3-oc-1XC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="BBh-xz-1uK"/>
                             <constraint firstItem="9G3-oc-1XC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NYj-F2-uHt"/>
+                            <constraint firstItem="WsS-jZ-0RN" firstAttribute="top" secondItem="9G3-oc-1XC" secondAttribute="bottom" constant="49" id="tgo-DU-KMQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MpU-mE-eGo"/>
