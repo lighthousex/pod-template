@@ -7,7 +7,7 @@ platform :ios, '10.1'
 target '${POD_NAME}_Example' do
   pod '${POD_NAME}', :path => '../'
 
-  pod 'LHXHowl'
+  pod 'LHXHowlCore'
 
   target '${POD_NAME}_Tests' do
     inherit! :search_paths
